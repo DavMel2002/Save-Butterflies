@@ -73,7 +73,8 @@ function App() {
     const modData =JSON.parse(data);
     const [formValues,setFormValues] = useState((modData===undefined)?initialInput:modData);
     const [values,setValues] = useState((modData===undefined)?initialInput:modData);
-    const [array,setArray] = useState(generate(values.row,values.col,values.bombPercentage));
+    const [array,setArray] = useState((values===undefined)?generate(initialInput.row,initialInput.col,initialInput.bombPercentage)
+        :generate(values.row,values.col,values.bombPercentage));
     const [showModal,setShowModal] = useState(0);
     const [counter,setCounter] = useState(countBombs(array));
     const [countFlags,setCountFlags] = useState(counterFlags(array));
