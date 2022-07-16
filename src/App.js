@@ -69,7 +69,8 @@ const initialInput = {
 }
 
 function App() {
-    window.localStorage.setItem("MyValues",JSON.stringify(initialInput));
+    if(window.localStorage.getItem("MyValues")===null)
+        window.localStorage.setItem("MyValues",JSON.stringify(initialInput));
     const data = window.localStorage.getItem("MyValues");
     const modData =JSON.parse(data);
     const [formValues,setFormValues] = useState((modData===undefined || modData===null)?initialInput:modData);
