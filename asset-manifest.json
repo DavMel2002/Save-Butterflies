@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/Save-Butterflies/static/js/main.b031ce58.js",
+    "main.js": "/Save-Butterflies/static/js/main.c96160e5.js",
     "static/media/cry.png": "/Save-Butterflies/static/media/cry.41671d871c6c60ab9f6a.png",
     "static/media/butterfly.webp": "/Save-Butterflies/static/media/butterfly.6c6e291e219c40490f71.webp",
     "index.html": "/Save-Butterflies/index.html",
-    "main.b031ce58.js.map": "/Save-Butterflies/static/js/main.b031ce58.js.map"
+    "main.c96160e5.js.map": "/Save-Butterflies/static/js/main.c96160e5.js.map"
   },
   "entrypoints": [
-    "static/js/main.b031ce58.js"
+    "static/js/main.c96160e5.js"
   ]
 }
