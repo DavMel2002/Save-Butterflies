@@ -71,9 +71,9 @@ const initialInput = {
 function App() {
     const data = window.localStorage.getItem("MyValues");
     const modData =JSON.parse(data);
-    const [formValues,setFormValues] = useState((modData===undefined)?initialInput:modData);
-    const [values,setValues] = useState((modData===undefined)?initialInput:modData);
-    const [array,setArray] = useState((values===undefined)?generate(initialInput.row,initialInput.col,initialInput.bombPercentage)
+    const [formValues,setFormValues] = useState((modData===undefined || modData===null)?initialInput:modData);
+    const [values,setValues] = useState((modData===undefined || modData===null)?initialInput:modData);
+    const [array,setArray] = useState((values===undefined || values===null)?generate(initialInput.row,initialInput.col,initialInput.bombPercentage)
         :generate(values.row,values.col,values.bombPercentage));
     const [showModal,setShowModal] = useState(0);
     const [counter,setCounter] = useState(countBombs(array));
