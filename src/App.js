@@ -69,14 +69,11 @@ const initialInput = {
 }
 
 function App() {
-    if(window.localStorage.getItem("MyValues")===null)
-        window.localStorage.setItem("MyValues",JSON.stringify(initialInput));
     const data = window.localStorage.getItem("MyValues");
     const modData =JSON.parse(data);
-    const [formValues,setFormValues] = useState((modData===undefined || modData===null)?initialInput:modData);
-    const [values,setValues] = useState((modData===undefined || modData===null)?initialInput:modData);
-    const [array,setArray] = useState((values===undefined || values===null)?generate(initialInput.row,initialInput.col,initialInput.bombPercentage)
-        :generate(values.row,values.col,values.bombPercentage));
+    const [formValues,setFormValues] = useState((modData===undefined || modData === null)?initialInput:modData);
+    const [values,setValues] = useState((modData===undefined || modData === null)?initialInput:modData);
+    const [array,setArray] = useState(generate(values.row,values.col,values.bombPercentage));
     const [showModal,setShowModal] = useState(0);
     const [counter,setCounter] = useState(countBombs(array));
     const [countFlags,setCountFlags] = useState(counterFlags(array));
